@@ -1,0 +1,64 @@
+{
+	"name": "message-tests",
+	"displayName": "message-tests",
+	"publisher": "vince-fugnitto",
+	"license": "MIT",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.43.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.showMessage",
+				"title": "Message: Show Message"
+			},
+			{
+				"command": "extension.showMessageNewLines",
+				"title": "Message: Show Message (New Lines)"
+			},
+			{
+				"command": "extension.showModalMessage",
+				"title": "Message: Show Modal Message"
+			},
+			{
+				"command": "extension.showModalMessageWithItems",
+				"title": "Message: Show Modal Message (With Items)"
+			},
+			{
+				"command": "extension.showModalMessageNoClose",
+				"title": "Message: Show Modal Message (No Close)"
+			},
+			{
+				"command": "extension.showModalMessageNoCloseWithItems",
+				"title": "Message: Show Modal Message (No Close With Items)"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.43.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0",
+		"vscode-test": "^1.2.2"
+	}
+}
